@@ -1,0 +1,228 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 26930,
+      "max": [
+        11.06570816040039,
+        -0.264142245054245,
+        11.621575355529785
+      ],
+      "min": [
+        -10.211006164550781,
+        -17.66845703125,
+        -10.289634704589844
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 323160,
+      "componentType": 5126,
+      "count": 26930,
+      "max": [
+        0.9998299479484558,
+        0.9999754428863525,
+        0.999738872051239
+      ],
+      "min": [
+        -0.9999590516090393,
+        -0.9999863505363464,
+        -0.9999153017997742
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 26930,
+      "max": [
+        0.9999998807907104,
+        0.9999386668205261,
+        0.9946122765541077,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.9997357726097107,
+        -0.9943957328796387,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 26930,
+      "max": [
+        0.9994860291481018,
+        0.9936519861221313
+      ],
+      "min": [
+        0.0004879999905824661,
+        0.00038300000596791506
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 135996,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "masanaga (https://sketchfab.com/tasklong)",
+      "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
+      "source": "https://sketchfab.com/3d-models/nashi-pear-kousui-a3ad6dbbcef04d4b92953695a2aec219",
+      "title": "Nashi pear \"Kousui\" / 梨（幸水）"
+    },
+    "generator": "Sketchfab-11.53.2",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 543984,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 215440,
+      "byteOffset": 543984,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 646320,
+      "byteOffset": 759424,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 430880,
+      "byteOffset": 1405744,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 1836624,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/pear_Model_11_u0_v0_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/pear_Model_11_u0_v0_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "pear_Model_11_u0_v0",
+      "normalTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.536765287075376
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        0.9999871253967285,
+        -1.5933411318520992e-16,
+        -0.005079197231680155,
+        0.0,
+        -1.6046192152785466e-16,
+        -1.0,
+        -2.1442300246563711e-16,
+        0.0,
+        -0.005079197231680155,
+        2.1523583645764602e-16,
+        -0.9999871253967285,
+        0.0,
+        0.003388242796063423,
+        -8.300341606140138,
+        9.634497642517088,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "pear_Model_11.obj.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_2"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ]
+}
