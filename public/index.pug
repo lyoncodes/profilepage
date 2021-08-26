@@ -1,6 +1,12 @@
 include header
-  h1 #{bus.name}
-  h1 #{bus.title}
-  h1 #{bus.location}
-  p #{bus.description}
-include model-viewer
+  include components/navbar
+  .col-12.m-container.m-center
+    .col-md-10
+      h1.title #{bus.header.name}
+      .row
+        h1.sub-title #{bus.header.title}
+        h1.sub-title #{bus.header.location}
+      .col-12.p-0
+        p.text-block #{bus.header.description}
+  include model-viewer
+include footer
