@@ -1,5 +1,7 @@
 model-viewer {
-  border: 1px solid blue;
-  width: 80%;
+  /* border: 1px solid blue; */
+  box-shadow: 0 1.1875rem 1.75rem 0.3125rem rgb(64 64 64 / 9%);
+  width: 90%;
   height: 400px;
+  max-width: 800px;
 }

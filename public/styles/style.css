@@ -4,6 +4,7 @@
 }
 body{
   margin: 0;
+  text-align: left;
 }
 [class*="col-"] {
   float: left;
@@ -37,6 +38,9 @@ body{
 }
 .mb-1{
   margin-bottom: 1em;
+}
+.mt-0{
+  margin-top: 0;
 }
 .mt-1{
   margin-top: 1em;
