@@ -6,61 +6,76 @@ body{
   margin: 0;
   text-align: left;
 }
-[class*="col-"] {
+:host .container{
+  position: absolute;
+  margin-top: 3em;
+}
+:host *[class*="col-"] {
   float: left;
   padding: 15px;
 }
-.row::after {
+:host .row::after {
   content: "";
   clear: both;
   display: table;
 }
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}å
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+:host .col-1 {width: 8.33%;}
+:host .col-2 {width: 16.66%;}
+:host .col-3 {width: 25%;}
+:host .col-4 {width: 33.33%;}
+:host .col-5 {width: 41.66%;}
+:host .col-6 {width: 50%;}
+:host .col-7 {width: 58.33%;}å
+:host .col-8 {width: 66.66%;}
+:host .col-9 {width: 75%;}
+:host .col-10 {width: 83.33%;}
+:host .col-11 {width: 91.66%;}
+:host .col-12 {width: 100%;}
+
+:host .m-container {
+  display: flex;
+}
+
+:host .full-height > div {
+  height: 100vh;
+}
 
 .m-container {
   display: flex;
 }
 
 /* Modifiers */
-.p-0 {
+:host .p-0 {
   padding: 0;
 }
-.mb-1{
+:host .mb-1{
   margin-bottom: 1em;
 }
-.mt-0{
+:host .mt-0{
   margin-top: 0;
 }
-.mt-1{
+:host .mt-1{
   margin-top: 1em;
 }
-.mt-3{
+:host .mt-3{
   margin-top: 3em;
 }
 .m-center{
   justify-content: center;
 }
-.m-end{
+:host .m-center{
+  justify-content: center;
+}
+:host .m-end{
   justify-content: flex-end;
 }
-.m-stack{
+:host .m-stack{
   flex-direction: column;
 }
-.m-neat{
+:host .m-neat{
   justify-content: space-evenly;
 }
-.sticky {
+:host .sticky {
   position: fixed;
   top: 0;
 }

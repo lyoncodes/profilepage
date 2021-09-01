@@ -3,7 +3,7 @@ const path = require('path')
 
 fastify.register(require('fastify-static'), {
   root: path.join(__dirname, 'public'),
-  prefix: '/public/',
+  prefix: '/public',
 })
 
 fastify.register(require('point-of-view'), {
@@ -12,7 +12,7 @@ fastify.register(require('point-of-view'), {
   }
 })
 
-fastify.register(require('./App'))
+fastify.register(require('./routes'))
 
 const start = async () => {
   try {
