@@ -6,10 +6,6 @@ body{
   margin: 0;
   text-align: left;
 }
-:host .container{
-  position: absolute;
-  margin-top: 3em;
-}
 :host *[class*="col-"] {
   float: left;
   padding: 15px;
@@ -32,7 +28,12 @@ body{
 :host .col-11 {width: 91.66%;}
 :host .col-12 {width: 100%;}
 
-:host .m-container {
+:host .m-container > * {
+  display: flex;
+  flex-direction: column;
+}
+
+.m-container {
   display: flex;
 }
 
@@ -40,8 +41,13 @@ body{
   height: 100vh;
 }
 
-.m-container {
-  display: flex;
+.full-height > div{
+  height: 100vh;
+}
+
+:host .stack-count{
+  position: fixed;
+  margin-top: 3em;
 }
 
 /* Modifiers */

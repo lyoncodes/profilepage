@@ -5,6 +5,7 @@ model-viewer{
   width: 90%;
   height: 400px;
   max-width: 800px;
-  position: fixed;
-  bottom: 5%;
+  margin-bottom: 30vh;
+  /* position: fixed; */
+  /* bottom: 5%; */
 }
