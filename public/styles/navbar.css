@@ -1,5 +1,5 @@
 /* Add a black background color to the top navigation */
-.topnav {
+.nav {
   background-color: #fff;
   overflow: hidden;
   position: fixed;
@@ -7,31 +7,31 @@
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
+.nav a {
   float: left;
   display: block;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
-.topnav a:first-child {
+.nav a:first-child {
   display: none;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
+/* Hide the link that should open and close the nav on small screens */
+.nav .icon {
   display: none;
 }
 
-/* When the screen is less than 800 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/* When the screen is less than 800 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the nav (.icon) */
 @media screen and (max-width: 800px) {
-  .topnav a:not(:first-child) {
+  .nav a:not(:first-child) {
     display: none;
   }
-  .topnav a:first-child{
+  .nav a:first-child{
     display: block;
   }
-  .topnav a.icon {
+  .nav a.icon {
     float: right;
     display: block;
     width: 65px;
@@ -39,27 +39,27 @@
   }
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+/* The "responsive" class is added to the nav with JavaScript when the user clicks on the icon. This class makes the nav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 800px) {
-  .topnav.responsive {
+  .nav.responsive {
     position: fixed;
     background-color: white;
     height: 100vh;
     width: 100vw;
     z-index: 1;
   }
-  .topnav.responsive a.icon {
+  .nav.responsive a.icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .topnav.responsive a:first-child {
+  .nav.responsive a:first-child {
     display: none;
   }
-  .topnav.responsive a:nth-child(2) {
+  .nav.responsive a:nth-child(2) {
     margin-top: 2em;
   }
-  .topnav.responsive a {
+  .nav.responsive a {
     float: none;
     display: block;
   }

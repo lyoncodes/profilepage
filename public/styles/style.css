@@ -38,7 +38,7 @@ body{
 }
 
 :host .full-height > div {
-  height: 100vh;
+  height: 120vh;
 }
 
 .full-height > div{
@@ -113,6 +113,11 @@ li {
 }
 
 /* Links */
+:host a{
+  display: block;
+  margin: 1em 0;
+}
+
 .i-link img{
   height: 50px;
   width: 50px;

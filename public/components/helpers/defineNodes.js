@@ -1,9 +1,16 @@
 import { Stack } from './Stack.js'
 
-function newNode(element, text){
-  let el = document.createElement(element)
-  el.innerText = text
-  return { el }
+function newNodeAttribute(node, data){
+  data.forEach(el => {
+    node.setAttribute(el.tag, el.value)
+  })
+}
+
+function newNode(nodeData){
+  let node = document.createElement(nodeData.type)
+  node.innerText = nodeData.text
+  nodeData.attr ? newNodeAttribute(node, nodeData.attr) : null
+  return { node }
 }
 
 function newTemplate(type, html) {
@@ -12,7 +19,7 @@ function newTemplate(type, html) {
   return template
 }
 
-function displayNFT(){
+function displayFooter(){
   const model = document.getElementsByTagName('model-viewer')
   model[0].style.display = 'block'
 }
@@ -29,36 +36,33 @@ export function populateDataStore(app) {
       this.shadowRoot.appendChild(template.content.cloneNode(true))
       
       const ref = this.shadowRoot.querySelector('#stack-container')
-      const HUD = this.shadowRoot.querySelector('.stack-count')
-
+      
       function pushAllToStack(){
-        for (let i = 0; i < app.app_data.length; i++) {
+        app.pages.forEach(arr => {
           let container = document.createElement('div')
-          
-          Object.entries(app.app_data[i]).forEach((prop, val) => {
-            const html = newNode(`${prop[0]}`, `${prop[1]}`)
-            container.append(html.el)
+          arr.forEach(id => {
+            let nodeData = app.data.find(el => el.id === id)
+            let ref = newNode(nodeData)
+            container.appendChild(ref.node)
           })
-          
           stack.push(container)
-        }
+        })
       }
-      function toggleCount(el){
-        el.innerHTML = `${stack.length()}/${app.app_data.length}`
-      }
-      function viewTop(){
-        stack.length() ? ref.appendChild(stack.pop()) : displayNFT()
+      
+      function popTop(){
+        stack.length() ? ref.appendChild(stack.pop()) : displayFooter()
       }
       
       pushAllToStack()
-      toggleCount(HUD)
-      viewTop()
+      popTop()
       
-      
-      document.addEventListener('click', () => {
-        toggleCount(HUD)
-        viewTop()
-      })
+      window.onscroll = () => {
+        if ((window.scrollY) == (document.body.scrollHeight - document.body.clientHeight)) {
+          popTop()
+        } else {
+          null
+        }
+      }
     }
   }
   customElements.define(`${app.name}`, AppStack)

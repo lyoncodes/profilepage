@@ -6,38 +6,95 @@ const Data = {
   <div class="m-container m-center">
     <div class="col-11 mt-3 full-height" id="stack-container">
     </div>
-    <span class="stack-count"></span>
   </div>
   <link rel="stylesheet" href="public/styles/style.css">
   `,
   type: 'template',
-  app_data: [
+  pages: [
+    [
+      '2',
+      '4',
+      '6',
+      '8',
+      '9',
+      '10'
+    ],
+    [
+      '1',
+      '3',
+      '5',
+      '7'
+    ]
+  ],
+  data: [
     {
-      h1: 'Test Case',
-      h2: 'PR Professional',
-      h3: 'Seattle',
-      p: 'I enjoy building efficient solutions to real-world problems. I specialize in full-stack web development across a variety of technologies. My favorites include firebase, SQLite3, node.js, fastify, javascript, and jade.'
+      id: '1',
+      text: 'Michael Lyon',
+      type: 'h1',
+      attr: [
+        {
+          tag: 'id',
+          value: 'main-title'
+        },
+      ]
     },
     {
-      h1: 'Gibbs',
-      h2: 'Genius',
-      h3: 'Seattle',
-      p: 'I authored algorithm G, the future of quantum computing.'
+      id: '2',
+      text: 'Projects',
+      type: 'h1'
     },
     {
-      h1: 'Projects',
-      h3: 'Web Development',
-      h4: 'www.bengaubert.com',
-      p: 'Node.js, express, javaScript, jade, CSS',
-      span: 'Built from a custom-made static site generator that renders shadow root templates from JSON objects.'
+      id: '3',
+      text: 'Software Developer',
+      type: 'h2'
     },
     {
-      h1: 'Michael Lyon',
-      h2: 'Software Developer',
-      h3: 'Seattle',
-      h6: '',
-      p: 'I enjoy building efficient solutions to real-world problems. I specialize in full-stack web development across a variety of technologies. My favorites include firebase, SQLite3, node.js, fastify, javascript, and jade.'
-    }
-  ]
+      id: '4',
+      text: 'Web Development',
+      type: 'h2'
+    },
+    {
+      id: '5',
+      text: 'Seattle, WA',
+      type: 'h2'
+    },
+    {
+      id: '6',
+      text: 'www.bengaubert.com',
+      type: 'a',
+      attr: [
+        {
+          tag: 'href',
+          value: 'http://www.bengaubert.com'
+        },
+      ]
+    },
+    {
+      id: '7',
+      text: 'I enjoy using computers to solve real-world problems. I specialize in full-stack web development across a variety of technologies. My favorites include firebase, SQLite3, node.js, fastify, javascript, and jade.',
+      type: 'span'
+    },
+    {
+      id: '8',
+      text: 'Features a carousel interface built from a List, conditionally displaying Objects using internal incrementors. Lightweight shadow-root elements mapped to jade templates make this site lightweight and easy to update.',
+      type: 'span'
+    },
+    {
+      id: '9',
+      text: 'www.lyonwrites.com',
+      type: 'a',
+      attr: [
+        {
+          tag: 'href',
+          value: 'http://www.lyonwrites.com'
+        },
+      ]
+    },
+    {
+      id: '10',
+      text: 'Builds a Stack of Nodes containing data fetched from Google Cloud, using a pop method to conditionally render templates based on user interaction.',
+      type: 'span'
+    },
+  ],
 }
 populateDataStore(Data)
