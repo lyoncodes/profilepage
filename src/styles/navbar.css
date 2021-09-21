@@ -1,0 +1,46 @@
+/* Add a black background color to the top navigation */
+.nav {
+  background-color: #fff;
+  overflow: hidden;
+  position: fixed;
+  width: 100vw;
+}
+
+/* Style the links inside the navigation bar */
+.nav a {
+  color: #4D2B99;
+  display: block;
+  float: left;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 25px;
+}
+/* .nav a:first-child {
+  display: none;
+} */
+
+/* Hide the link that should open and close the nav on small screens */
+.nav .icon {
+  display: none;
+  float: right;
+  margin-right: 1em;
+}
+
+/* When the screen is less than 800 pixels wide...*/
+@media screen and (max-width: 800px) {
+  .nav {
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+  }
+  .nav a:first-child {
+    display: inline;
+  }
+  .nav a {
+    float: right;
+    display: inline;
+  }
+  .nav .icon {
+    float: left;
+  }
+}

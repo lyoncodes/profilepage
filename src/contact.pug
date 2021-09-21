@@ -1,0 +1,15 @@
+#contact.m-container
+  h1 Let's Work Together
+  .col-12.col-md-8.plane.text-center
+    form
+      label name
+      input(id="name-field" name="name-field")
+      label return contact
+      input(id="email-field" name="email-field")
+      label how can I help you?
+      input(id="msg-field" name="msg-field")
+      .g-recaptcha#recaptcha(
+        data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+        data-callback="submitContactForm"
+        data-size="invisible")
+      button(id='submit') submit

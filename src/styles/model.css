@@ -1,0 +1,36 @@
+model-viewer{
+  /* border: 1px solid blue; */
+  box-shadow: 0 1.1875rem 1.75rem 0.3125rem rgb(64 64 64 / 9%);
+  display: none;
+  width: 90%;
+  height: 400px;
+  max-width: 800px;
+  margin-bottom: 30vh;
+  position: fixed;
+  bottom: 5%;
+}
+#contact{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 .5em 20vh .5em;
+  padding: 0 1.25em; 
+}
+#contact form{
+  padding: 1.25em;
+}
+form label{
+  display: block;
+  float: left;
+  padding-bottom: .25em;
+}
+form input{
+  border: 1px solid rgb(168, 168, 168);
+  height: 3em;
+  width: 100%;
+  margin-bottom: 1em;
+}
+form #msg-field{
+  height: 8em;
+}

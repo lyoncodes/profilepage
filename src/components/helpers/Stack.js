@@ -1,4 +1,4 @@
-export class Stack {
+module.exports = class Stack {
   constructor() {
     this.dataStore = [];
     this.top = 0;

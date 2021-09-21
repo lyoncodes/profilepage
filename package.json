@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,8 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "boom": "^7.3.0",
     "fastify": "^3.20.2",
+    "fastify-recaptcha": "^1.0.0",
     "fastify-static": "^4.2.3",
+    "mongoose": "^6.0.6",
     "point-of-view": "^4.15.2",
     "pug": "^3.0.2"
   }
