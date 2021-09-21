@@ -1,10 +1,3 @@
-
-// function newNodeAttribute(node, data){
-//   data.forEach(el => {
-//     node.setAttribute(el.tag, el.value)
-//   })
-// }
-
 // function newTemplate(type, html) {
 //   const template = document.createElement(type);
 //   template.innerHTML = html
@@ -60,10 +53,8 @@
 //   customElements.define(`${app.name}`, AppStack)
 // }
 function newNode(nodeData){
-  console.log(nodeData)
   let node = document.createElement(nodeData.type)
   node.innerText = nodeData.text
-  // nodeData.attr ? newNodeAttribute(node, nodeData.attr) : null
   return { node }
 }
 
@@ -72,12 +63,8 @@ export default function DefineNodes(){
 
   fetch('/data').then(async res => {
     const stack = await res.json()
-    console.log(stack)
     stack.dataStore.forEach(el => {
       const wrapper = newNode(el)
-
-      console.log(wrapper.node)
-
       root.appendChild(wrapper.node)
     })
   })
