@@ -9,8 +9,6 @@ function validate(e) {
   const msg = document.querySelector('#msg-field').value
   const captcha = document.querySelector('#g-recaptcha-response').value
 
-  console.log({name: name, email: email, msg: msg, captcha: captcha})
-
   grecaptcha.execute();
 }
 function onload() {

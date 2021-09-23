@@ -15,6 +15,7 @@ body{
   clear: both;
   display: table;
 }
+
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -28,8 +29,6 @@ body{
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-.col-12 {width:100%}
-
 .m-container {
   display: flex;
   flex-direction: column;
@@ -37,10 +36,23 @@ body{
 
 .full-height > div {
   height: 120vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .full-height > :first-child{
   margin-top: 10vh;
+}
+
+/* Text */
+span::after{
+  content: '';
+  display: block;
+  height: 2em;
+}
+h4{
+  color: #F27457;
+  margin-top: .33em;
 }
 
 /* Modifiers */
@@ -63,6 +75,7 @@ body{
 .mt-3{
   margin-top: 3em;
 }
+
 .m-center{
   justify-content: center;
 }
@@ -75,23 +88,15 @@ body{
 .m-neat{
   justify-content: space-evenly;
 }
+
 .sticky {
   position: fixed;
   top: 0;
-}
-.grecaptcha-badge{
-  display: none !important;
 }
 
 /* UL */
 li {
   margin-bottom: 1em;
-}
-
-/* Links */
-:host a{
-  display: block;
-  margin: 1em 0;
 }
 
 /* Buttons */
@@ -108,13 +113,17 @@ button {
   width: 50%;
 }
 
-/* layers */
+/* Layers */
 .plane{
   box-shadow: 0 1.1875rem 1.75rem 0.3125rem rgb(64 64 64 / 9%);
 }
 
+/* Mixins, Plugins, Import styling overrides */
+.grecaptcha-badge{
+  display: none !important;
+}
+
 @media only screen  and (min-width : 1224px) {
-  /* Styles */
   .col-md-1 {width: 8.33%;}
   .col-md-2 {width: 16.66%;}
   .col-md-3 {width: 25%;}

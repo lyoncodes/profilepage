@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const Stack = require('./src/components/helpers/Stack')
 
 async function routes (fastify, options, done){
   mongoose.connect('mongodb+srv://meanxael:tt5FXQD1XudeUPLd@cluster0.u46go.mongodb.net/myProfile?retryWrites=true&w=majority')
@@ -25,20 +24,24 @@ async function routes (fastify, options, done){
   const Node = mongoose.model('nodeModel', nodeSchema);
   
   const containers = await Container.find({});
-
-  const nodeStack = new Stack();
+  
+  const nodeStack = [];
   
   containers.forEach(el => {
+    const page = []
     el.nodes.forEach(async id => {
       let node = await Node.findById(id).exec()
-      nodeStack.push(node)
+      page.push(node)
     })
+    nodeStack.push(page)
   })
 
+  nodeStack.reverse()
 
   fastify.get('/', async (req, reply) => {
     return reply.view('src/index.pug')
   });
+
   fastify.get('/data', { nodeSchema }, async (req, reply) => {
     return reply.send(nodeStack)
   });

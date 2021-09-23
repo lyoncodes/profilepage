@@ -5,6 +5,10 @@ function hideIcon(){
 function showIcon(){
   icon.setAttribute('style', 'display: inline')
 }
+function displayFooter(){
+  const form = document.getElementById('contact')
+  form.style.display = 'flex'
+}
 document.onscroll = () => {
   if (window.scrollY > 500){
     showIcon()
