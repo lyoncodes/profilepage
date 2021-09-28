@@ -1,15 +1,23 @@
-#contact.m-container
-  h1 Let's Work Together
-  .col-12.col-md-4.plane.text-center
-    form
-      label name
-      input(id="name-field" name="name-field")
-      label return contact
-      input(id="email-field" name="email-field")
-      label how can I help you?
-      input(id="msg-field" name="msg-field")
-      .g-recaptcha#recaptcha(
-        data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-        data-callback="submitContactForm"
-        data-size="invisible")
-      button(id='submit') submit
+.m-container.col-12
+  .col-12.col-md-6.center
+    h1 Get In Touch
+  #contact.m-container
+    .col-12.col-md-5.form-container.text-center
+      form(type="POST" action="/")
+        .row
+          .col-6
+            label name
+            input(id="name" name="name")
+          .col-6
+            label return contact
+            input(id="email" name="email")
+        .col-12.pt-0
+          label how can I help you?
+          textarea(id="msg" name="msg")
+      
+        .g-recaptcha#recaptcha(
+          data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+          data-callback="submitContactForm"
+          data-size="invisible")
+        
+        button(type="submit" id="submit") submit

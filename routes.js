@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
-
 async function routes (fastify, options, done){
-  mongoose.connect('mongodb+srv://meanxael:tt5FXQD1XudeUPLd@cluster0.u46go.mongodb.net/myProfile?retryWrites=true&w=majority')
+  mongoose.connect('mongodb+srv://meanxael:'+`${options.token}`+'@cluster0.u46go.mongodb.net/myProfile?retryWrites=true&w=majority')
   .then(() => {console.log('mongoDB connected')})
   
   const containerSchema = new mongoose.Schema({
@@ -10,21 +9,21 @@ async function routes (fastify, options, done){
   },
   {
     collection: 'nodeBucket'
-  })
+  });
+
   const nodeSchema = new mongoose.Schema({
     type: String,
     text: String
   },
   {
     collection: 'nodes'
-  }
-  );
-  
+  });
+
   const Container = mongoose.model('containerModel', containerSchema);
   const Node = mongoose.model('nodeModel', nodeSchema);
   
-  const containers = await Container.find({});
-  
+  const containers = await Container.find({}).sort('order');
+
   const nodeStack = [];
   
   containers.forEach(el => {
@@ -38,13 +37,13 @@ async function routes (fastify, options, done){
 
   nodeStack.reverse()
 
-  fastify.get('/', async (req, reply) => {
+  fastify.get('/', async(req, reply) => {
     return reply.view('src/index.pug')
   });
-
-  fastify.get('/data', { nodeSchema }, async (req, reply) => {
+  fastify.get('/data', async(req, reply) => {
     return reply.send(nodeStack)
   });
+  
   done()
 }
 module.exports = routes

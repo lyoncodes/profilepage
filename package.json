@@ -12,9 +12,12 @@
   "dependencies": {
     "boom": "^7.3.0",
     "fastify": "^3.20.2",
+    "fastify-env": "^2.1.1",
+    "fastify-formbody": "^5.1.0",
     "fastify-recaptcha": "^1.0.0",
     "fastify-static": "^4.2.3",
     "mongoose": "^6.0.6",
+    "nodemailer": "^6.6.5",
     "point-of-view": "^4.15.2",
     "pug": "^3.0.2"
   }

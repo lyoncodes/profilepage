@@ -34,10 +34,13 @@ body{
   flex-direction: column;
 }
 
+.center, .full-height > div{
+  margin-left: auto;
+  margin-right: auto
+}
+
 .full-height > div {
   height: 120vh;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .full-height > :first-child{
@@ -50,18 +53,23 @@ span::after{
   display: block;
   height: 2em;
 }
+
 h4{
   color: #F27457;
   margin-top: .33em;
 }
 
+
+
 /* Modifiers */
 .text-center{
   text-align: center;
 }
-
 .p-0 {
   padding: 0;
+}
+.pt-0{
+  padding-top: 0;
 }
 .mb-1{
   margin-bottom: 1em;
@@ -112,6 +120,7 @@ button {
   text-transform: uppercase;
   width: 50%;
 }
+
 
 /* Layers */
 .plane{
